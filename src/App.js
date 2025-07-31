@@ -39,12 +39,14 @@ function App() {
 
 
     return (
-    <div className="page-container position-relative">
-      <Header setUserName={setUserName}/>
-      <Nav profile={profile}/>
-      <Profile profile={profile}/>
-      <Toast toast={toast}/>
-    </div>
+        <div>
+            <Header setUserName={setUserName}/>
+            <div className="page-container position-relative">
+                <Nav profile={profile}/>
+                <Profile profile={profile}/>
+                <Toast toast={toast}/>
+            </div>
+        </div>
   );
 }
 

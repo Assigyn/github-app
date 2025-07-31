@@ -30,6 +30,11 @@ header {
 }
 
 @media screen and (max-width: 484px) {
+  header {
+    background: url("./../img/hero-image-github-profile-sm.jpg") 50% 50% no-repeat;
+    background-size: cover;
+  }
+
   .searchResultsList {
     width: 100%;
     margin: 0 30px;

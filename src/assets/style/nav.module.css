@@ -13,3 +13,9 @@ nav {
 .navBtns {
     padding-top: 12px;
 }
+
+@media screen and (max-width: 484px) {
+    nav {
+        margin: 0 20px;
+    }
+}

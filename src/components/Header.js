@@ -36,12 +36,14 @@ function Header({setUserName}) {
 
     return (
         <header>
-            <input id="search-input" className={styles.searchInput} placeholder="username" type="text" onBlur={(e) => closeMenu(e.relatedTarget)} onKeyDown={(e) => {
-                if ('Enter' === e.key) {
-                    setSearch(e.target.value);
-                }
-            }}/>
-            {searchResults.length > 0 ? <div id="profile-select" onBlur={(e) => closeMenu(e.relatedTarget)} className={styles.searchResultsList}>{generateSearchResultsList()}</div> : null}
+            <div className="page-container">
+                <input id="search-input" className={styles.searchInput} placeholder="username" type="text" onBlur={(e) => closeMenu(e.relatedTarget)} onKeyDown={(e) => {
+                    if ('Enter' === e.key) {
+                        setSearch(e.target.value);
+                    }
+                }}/>
+                {searchResults.length > 0 ? <div id="profile-select" onBlur={(e) => closeMenu(e.relatedTarget)} className={styles.searchResultsList}>{generateSearchResultsList()}</div> : null}
+            </div>
         </header>
     )
 }
