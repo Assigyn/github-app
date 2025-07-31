@@ -1,0 +1,15 @@
+.toast {
+  background-color: #a53939;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+  border-radius: 12px;
+  margin: 20px;
+  width: 200px;
+}
+
+.toast a {
+  text-decoration: none;
+}
