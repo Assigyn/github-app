@@ -10,7 +10,7 @@ function Profile({profile}) {
     ]);
 
      useEffect(() => {
-         if (!repoUrl) {
+         if (null === repoUrl) {
              setRepos([]);
              return;
          }
@@ -41,7 +41,7 @@ function Profile({profile}) {
                 })}
             </div>
 
-            {repos.length > 0 ? <div className={styles.appViewMore}><a href={profileUrl} target="_blank">View all repositories</a></div> : null}
+            {repos.length > 0 ? <div className={styles.appViewMore}><a href={profileUrl} rel="noreferrer" target="_blank">View all repositories</a></div> : null}
         </div>
     )
 }

@@ -13,10 +13,10 @@ function Toast({toast}) {
         <div id="toast-message" className={`${styles.toast} d-flex-column d-none`}>
             <div className="d-flex-row justify-content-between">
                 <p className="toast-title text-classic m-0">{toast.title}</p>
-                <a href="#" className="toast-close" onClick={(e) => {
+                <button className="toast-close" onClick={(e) => {
                     e.preventDefault();
                     closeToast(e.target);
-                }}>x</a>
+                }}>x</button>
             </div>
             <p className="toast-description text-small mb-0">{toast.text}</p>
         </div>
