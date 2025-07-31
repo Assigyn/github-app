@@ -9,3 +9,12 @@
     grid-row-gap: 34px;
     margin-top: 34px;
 }
+
+.appViewMore {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.appViewMore a {
+    text-decoration: none;
+}

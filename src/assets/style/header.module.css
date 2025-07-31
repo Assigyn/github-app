@@ -16,3 +16,12 @@ header {
   border-radius: 30px;
   padding: 16px;
 }
+
+.searchResultsList {
+  background-color: #111629;
+  width: 485px;
+  margin: auto;
+  position: relative;
+  z-index: 10;
+  border-radius: 20px;
+}

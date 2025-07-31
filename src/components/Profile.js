@@ -36,6 +36,8 @@ function Profile({profile}) {
                     return <Card key={index} repository={repo} />
                 })}
             </div>
+
+            {repos.length > 0 ? <div className={styles.appViewMore}><a href="#">View all repositories</a></div> : null}
         </div>
     )
 }
