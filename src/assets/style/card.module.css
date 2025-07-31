@@ -1,0 +1,14 @@
+.appRepoCard {
+    background: linear-gradient(95deg, #111729 3%, #1d1b48 99.61%);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.appRepoCard h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.appRepoCard p {
+    margin: 0 0 25px 0;
+}

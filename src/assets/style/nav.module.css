@@ -1,0 +1,15 @@
+nav {
+    margin: 0 40px;
+}
+
+.navAvatar {
+    width: 100px;
+    height: 100px;
+    border: 10px solid #20293a;
+    border-radius: 10px;
+    margin-top: -40px
+}
+
+.navBtns {
+    padding-top: 12px;
+}

@@ -1,0 +1,11 @@
+.appProfile {
+    margin-bottom: 100px;
+}
+
+.appProfileRepo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 32px;
+    grid-row-gap: 34px;
+    margin-top: 34px;
+}
