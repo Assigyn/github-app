@@ -7,14 +7,17 @@ header {
 }
 
 .searchInput {
-  width: 485px;
+  width: 385px;
   height: 24px;
-  background-color: #20293a;
   border: 0;
   display: block;
   margin: auto;
-  border-radius: 30px;
-  padding: 16px;
+  border-radius: 12px;
+  padding: 16px 50px;
+  background-image: url("../img/Search.svg");
+  background-position: 16px 50%;
+  background-repeat: no-repeat;
+  background-color: #20293a;
 }
 
 .searchResultsList {
@@ -24,4 +27,16 @@ header {
   position: relative;
   z-index: 10;
   border-radius: 20px;
+}
+
+@media screen and (max-width: 484px) {
+  .searchResultsList {
+    width: 100%;
+    margin: 0 30px;
+  }
+
+  .searchInput {
+    width: 100%;
+    margin: 0 30px;
+  }
 }

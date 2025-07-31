@@ -4,31 +4,35 @@ import Card from "./Card";
 
 function Profile({profile}) {
     const repoUrl = profile.repos_url ?? null;
-    const [repos, setRepos] = useState([]);
+    const [repos, setRepos] = useState([
+        {name: '...', description: '...'},
+        {name: '...', description: '...'}
+    ]);
 
-    useEffect(() => {
-        if (!repoUrl) {
-            setRepos([]);
-            return;
-        }
+     useEffect(() => {
+         if (!repoUrl) {
+             setRepos([]);
+             return;
+         }
+         fetch(repoUrl)
+             .then((response) => {
+                 if (200 === response.status) {
+                     return response.json();
+                 }
+             }).then((json) => {
+                 setRepos(json);
+         })
+     }, [profile]);
 
-        fetch(repoUrl)
-            .then((response) => {
-                if (200 === response.status) {
-                    return response.json();
-                }
-            }).then((json) => {
-                setRepos(json);
-        })
-    }, [profile]);
+    const profileUrl = `${profile.html_url}?tab=repositories`
 
     return (
         <div className={styles.appProfile}>
-            <h1 className="text-large">GitHub</h1>
-            <h2 className="text-title mb-0">How people build software.</h2>
+            <h1 className="text-large">{profile.login ?? '...'}</h1>
+            {profile.bio ? <h2 className="text-title mb-0">{profile.bio}.</h2> : null}
 
             <div className={styles.appProfileRepo}>
-                {repos.map((repo, index) => {
+            {repos.slice(0, 6).map((repo, index) => {
                     if (repo.private) {
                         return null;
                     }
@@ -37,7 +41,7 @@ function Profile({profile}) {
                 })}
             </div>
 
-            {repos.length > 0 ? <div className={styles.appViewMore}><a href="#">View all repositories</a></div> : null}
+            {repos.length > 0 ? <div className={styles.appViewMore}><a href={profileUrl} target="_blank">View all repositories</a></div> : null}
         </div>
     )
 }

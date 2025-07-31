@@ -10,8 +10,9 @@ body {
 }
 
 .page-container {
-  width: 1350px;
+  max-width: 1350px;
   margin: auto;
+  padding: 0 20px;
 }
 
 .text-large {
@@ -66,6 +67,10 @@ body {
 
 .justify-content-between {
   justify-content: space-between;
+}
+
+.align-self-center {
+  align-self: center;
 }
 
 .align-items-end {

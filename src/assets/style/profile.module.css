@@ -18,3 +18,9 @@
 .appViewMore a {
     text-decoration: none;
 }
+
+@media screen and (max-width: 767px) {
+    .appProfileRepo {
+        grid-template-columns: 1fr;
+    }
+}
