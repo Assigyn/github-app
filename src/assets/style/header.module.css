@@ -29,19 +29,31 @@ header {
   border-radius: 20px;
 }
 
-@media screen and (max-width: 484px) {
+@media screen and (max-width: 500px) {
   header {
     background: url("./../img/hero-image-github-profile-sm.jpg") 50% 50% no-repeat;
     background-size: cover;
   }
 
   .searchResultsList {
-    width: 100%;
-    margin: 0 30px;
+    width: 360px;
+    margin: 0 auto;
   }
 
   .searchInput {
-    width: 100%;
-    margin: 0 30px;
+    max-width: 260px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .searchResultsList {
+    width: 50px;
+    margin: 0 auto;
+  }
+
+  .searchInput {
+    max-width: 150px;
+    margin: 0 auto;
   }
 }
